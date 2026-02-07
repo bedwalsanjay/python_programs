@@ -16,7 +16,7 @@ class sol1:
     def sum(self, nums:list, target:int)-> list[int]:
         len_nums= len(nums)
         for i in range(len_nums):
-            for j in range(i,len_nums):
+            for j in range(i+1,len_nums):
                 if nums[i]+num[j] == target:
                     print([i,j])
                     break
