@@ -24,18 +24,18 @@ class lib:
                 self.registeration()
                 print("User with name " + self.name + " who belongs to class "+self.sclass +" is registered suceessfully")
             elif c==2:
-                self.borrow()
+                self.borrow_book()
             elif c==3:
                 self.book_status()      
             elif c==4:
-                self.book_return()        
+                self.return_book()        
             else:
                 break
     def registeration(self):
         self.name=input("enter your name : ")
         self.sclass=input("enter your class : ")
 
-    def borrow(self):
+    def borrow_book(self):
         if(self.no_book_issued==3):
             print("NOT ALLOWED " + self.name +" has already reached to the maximum limit of borrowing books")
             return
@@ -52,7 +52,7 @@ class lib:
             print(i)
         print('*'*50)
 
-    def book_return(self):
+    def return_book(self):
         rbook=input("enter the name of a book to return : ")
         new_books=[book for book in self.books if book[0] !=rbook]
         self.books=new_books
